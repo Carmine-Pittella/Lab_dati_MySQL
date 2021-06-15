@@ -1,0 +1,37 @@
+Azienda (ID, Nome, indirizzo, codice fiscale/partita IVA, id rappresentante, id tutor aziendale, sede, verificata, settore)
+
+Studente (nome, cognome, username, password, data nascita, luogo nascita, residenza, CF{ID}, telefono, corso laurea, handicap{si/no})
+
+Tirocinio (ID, luogo, orari, durata{mesi/ore}, obiettivi{da imparare}, modalità{da casa, in sede..}, facilitazioni{rimborso spese..}, CFU, esito
+	   id azienda, id studente, id tutor universitario)
+
+Rappresentante (ID, nome, cognome)
+
+Tutor aziendale(ID, nome, cognome, telefono, mail, id tirocinio, username, password)
+
+Tutor universitario (ID, nome, cognome, telefono, mail, id studente)
+
+Feedback (ID, id studente, id tirocinio, dettagli, stelle)
+
+Amministratore (username, password)
+
+
+
+
+ASSOCIAZIONI:
+
+tutor aziendale SEGUE studente
+tutor universitario SEGUE studente
+studente RILASCIA feedback
+rappresentante RAPPRESENTA azienda
+
+studente:
+	REGISTRARSI al sistema
+	
+
+
+
+
+
+
+
