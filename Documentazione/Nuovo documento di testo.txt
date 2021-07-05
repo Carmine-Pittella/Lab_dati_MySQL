@@ -12,6 +12,9 @@ Tutor aziendale(ID, nome, cognome, telefono, mail, id tirocinio, username, passw
 Tutor universitario (ID, nome, cognome, telefono, mail, id studente)
 
 Feedback (ID, id studente, id tirocinio, dettagli, stelle)
+* forse qua ci va solo stelle perchè dice: Infine, ogni studente, una volta concluso il tirocinio, potrà inserire un feedback relativo 
+all’esperienza in generale e all’azienda presso cui si è svolto, esprimendo una valutazione di 
+gradimento nella scala 0-5
 
 Amministratore (username, password)
 
@@ -24,6 +27,9 @@ tutor aziendale SEGUE studente
 tutor universitario SEGUE studente
 studente RILASCIA feedback
 rappresentante RAPPRESENTA azienda
+amministratore VERIFICA azienda
+studente SVOLGE tirocinio
+azienda CREA OFFERTA tirocinio ( da scrivere meglio magari )
 
 studente:
 	REGISTRARSI al sistema

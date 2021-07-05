@@ -18,7 +18,7 @@ public class ProvaUff {
 			Connection con;
 			try 
 			{
-				con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/MC", "root","root");
+				con = DriverManager.getConnection("jdbc:mysql://root@127.0.0.1:3306/mc", "root","root");
 				return con;
 			} catch (Exception e) {
 				System.out.println ("get connection" + e.getMessage());
