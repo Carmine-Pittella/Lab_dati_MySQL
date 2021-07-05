@@ -2,7 +2,7 @@ Azienda (ID, Nome, indirizzo, codice fiscale/partita IVA, id rappresentante, id 
 
 Studente (nome, cognome, username, password, data nascita, luogo nascita, residenza, CF{ID}, telefono, corso laurea, handicap{si/no})
 
-Tirocinio (ID, luogo, orari, durata{mesi/ore}, obiettivi{da imparare}, modalità{da casa, in sede..}, facilitazioni{rimborso spese..}, CFU, esito
+Tirocinio (ID, SEDE, orari, durata{mesi/ore}, obiettivi{da imparare}, modalità{da casa, in sede..}, facilitazioni{rimborso spese..}, CFU, esito
 	   id azienda, id studente, id tutor universitario)
 
 Rappresentante (ID, nome, cognome)
