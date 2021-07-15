@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LayoutController">
+   <left>
+      <VBox opacity="0.6" prefHeight="450.0" prefWidth="150.0" style="-fx-background-color: #7337EC;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="barraMenu" prefHeight="450.0" prefWidth="150.0" />
+         </children></VBox>
+   </left>
+   <top>
+      <Pane prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="141.0" fitWidth="809.0" layoutX="-5.0" layoutY="-39.0" opacity="0.84" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../immagini/Carmine.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
