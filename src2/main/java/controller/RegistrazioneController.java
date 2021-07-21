@@ -93,7 +93,7 @@ public class RegistrazioneController implements Initializable, DataInitializable
 
 	@FXML
 	void annulla(ActionEvent event) {
-		dispatcher.GetView("login", null);
+		dispatcher.logout();
 	}
 
 	public Date convertToDateViaSqlDate(LocalDate dateToConvert) {

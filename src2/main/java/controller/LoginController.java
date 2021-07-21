@@ -4,10 +4,12 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
 import domain.AmministratoreAziendale;
+import domain.Utente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -56,20 +58,14 @@ public class LoginController implements Initializable, DataInitializable<Object>
 
 	@FXML
 	void accesso(ActionEvent event) throws Exception {
-
 		Connection con = getConnection();
-
-		getUsernameUtente(username.getText());
-
 		String s = "SELECT * FROM utente " + "WHERE username=" + "'" + username.getText() + "'" + " AND " + "password="
 				+ "'" + password.getText() + "';";
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(s);
-
 		try {
-
 			if (rs.next()) {
-				apriSchermate(rs.getString("tipo"));
+				apriSchermate(rs);
 			} else {
 
 				labelErrore.setVisible(true);
@@ -81,10 +77,15 @@ public class LoginController implements Initializable, DataInitializable<Object>
 		}
 	}
 
-	public void apriSchermate(String s) {
-		switch (s) {
+	public void apriSchermate(ResultSet rs) throws Exception {
+		switch (rs.getString("tipo")) {
 		case "s":
-			dispatcher.GetView("studente", null);
+			Utente u = new Utente();
+			u.setNome(rs.getString("nome"));
+			u.setNome(rs.getString("cognome"));
+			u.setNome(rs.getString("username"));
+			u.setNome(rs.getString("password"));
+			dispatcher.loggedIn(u);
 			break;
 		case "ta":
 
@@ -95,20 +96,14 @@ public class LoginController implements Initializable, DataInitializable<Object>
 		case "aa":
 			AmministratoreAziendale aa = new AmministratoreAziendale();
 			aa.setUsername(username.getText());
-			dispatcher.GetView("adminaziendale", aa );
+			dispatcher.GetView("adminaziendale", aa);
 		}
-
-	}
-
-	public String getUsernameUtente(String s) {
-		return s;
 
 	}
 
 	@FXML
 	void registrazione(ActionEvent event) {
 		dispatcher.GetView("registrazione", null);
-
 	}
 
 }

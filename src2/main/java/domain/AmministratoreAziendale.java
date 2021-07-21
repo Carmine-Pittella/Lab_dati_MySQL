@@ -1,69 +1,31 @@
 package domain;
 
-public class AmministratoreAziendale {
+public class AmministratoreAziendale extends Utente{
 
-	private int idAmministratoreAziendale;
-	private String nome;
-	private String cognome;
-	private String username;
-	private String password;
-	private int idAzienda;
-	private int idUtente;
-
-	public int getIdAmministratoreAziendale() {
+	private Integer idAmministratoreAziendale;
+	private Integer idAzienda;
+	private Integer idUtente;
+	
+	// GET E SET
+	public Integer getIdAmministratoreAziendale() {
 		return idAmministratoreAziendale;
 	}
-
-	public void setIdAmministratoreAziendale(int idAmministratoreAziendale) {
+	public void setIdAmministratoreAziendale(Integer idAmministratoreAziendale) {
 		this.idAmministratoreAziendale = idAmministratoreAziendale;
 	}
-
-	public int getIdAzienda() {
+	public Integer getIdAzienda() {
 		return idAzienda;
 	}
-
-	public void setIdAzienda(int idAzienda) {
+	public void setIdAzienda(Integer idAzienda) {
 		this.idAzienda = idAzienda;
 	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public int getIdUtente() {
+	public Integer getIdUtente() {
 		return idUtente;
 	}
-
-	public void setIdUtente(int idUtente) {
+	public void setIdUtente(Integer idUtente) {
 		this.idUtente = idUtente;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCognome() {
-		return cognome;
-	}
-
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
+	
 
 }
