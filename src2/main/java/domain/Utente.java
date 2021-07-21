@@ -1,19 +1,11 @@
 package domain;
 
 public class Utente {
-	private Integer ID;
 	private String nome;
 	private String cognome;
 	private String username;
 	private String password;
 
-	public Integer getID() {
-		return ID;
-	}
-
-	public void setID(Integer iD) {
-		ID = iD;
-	}
 
 	public String getNome() {
 		return nome;

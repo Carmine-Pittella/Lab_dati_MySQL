@@ -31,8 +31,6 @@ public class AdminController implements Initializable, DataInitializable<Utente>
 
 		ObservableList<Amministratore> a;
 		try {
-//			a = FXCollections.observableArrayList(prova1.getLista());
-//			tabellaAdmin.setItems(a);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

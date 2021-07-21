@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminAziendaleController">
+   <children>
+      <TextField fx:id="partitaIva" layoutX="93.0" layoutY="96.0" prefHeight="30.0" prefWidth="160.0" promptText="Partita iva" />
+      <Label layoutX="250.0" layoutY="29.0" text="Inserisci azienda">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nome" layoutX="93.0" layoutY="153.0" prefHeight="30.0" prefWidth="160.0" promptText="Nome" />
+      <TextField fx:id="settore" layoutX="93.0" layoutY="213.0" prefHeight="30.0" prefWidth="160.0" promptText="Settore" />
+      <TextField fx:id="NomeRappr" layoutX="401.0" layoutY="96.0" prefHeight="30.0" prefWidth="190.0" promptText="Nome rappresentante legale" />
+      <TextField fx:id="cognomeRappr" layoutX="401.0" layoutY="153.0" prefHeight="30.0" prefWidth="190.0" promptText="Cognome rappresentante legale" />
+      <Button fx:id="conferma" layoutX="362.0" layoutY="295.0" mnemonicParsing="false" onAction="#inserisciAzienda" prefHeight="38.0" prefWidth="79.0" text="Conferma" />
+      <Button fx:id="annulla" layoutX="214.0" layoutY="295.0" mnemonicParsing="false" onAction="#tornaIndietro" prefHeight="38.0" prefWidth="92.0" text="Torna indietro" />
+      <Label fx:id="successo" layoutX="215.0" layoutY="364.0" text="Azienda inserita correttamente!" textFill="#17c300">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
